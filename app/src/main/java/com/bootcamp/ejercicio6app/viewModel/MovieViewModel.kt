@@ -21,12 +21,24 @@ class MovieViewModel @Inject constructor(
         repository.getPopularMoviesRoom()
 
     }
-    init {
-        getPopularMoviesApi()
-    }
-    private fun getPopularMoviesApi() {
+
+    fun loadMoviesFromApi() {
         viewModelScope.launch {
-repository.getPopularMoviesApi()
+            repository.getPopularMoviesApi()
         }
     }
+
+    fun deleteMovie(movie: Movie) {
+        viewModelScope.launch {
+            repository.deleteMovieRoom(movie)
+        }
     }
+
+    fun addMovie(movie: Movie) {
+        viewModelScope.launch {
+            repository.addMovieRoom(movie)
+        }
+
+
+    }
+}
