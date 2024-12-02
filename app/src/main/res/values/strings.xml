@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Movie DB</string>
+    <string name="add_movie">Agregar Película</string>
+    <string name="add">Agregar </string>
+    <string name="cancel">CANCELAR </string>
+
+
+    <string name="titel">TITULO</string>
+    <string name="descrip">Descripcion </string>
+    <string name="fech_lanz">Fecha de lanzamiento </string>
+    <string name="note">Calificacion </string>
+
+
+    <string name="delete_movie">Eliminar</string>
 </resources>

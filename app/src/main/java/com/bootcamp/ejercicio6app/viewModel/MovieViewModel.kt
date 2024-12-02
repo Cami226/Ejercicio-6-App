@@ -22,7 +22,7 @@ class MovieViewModel @Inject constructor(
 
     }
 
-    fun loadMoviesFromApi() {
+    fun getPopularMoviesApi() {
         viewModelScope.launch {
             repository.getPopularMoviesApi()
         }

@@ -90,32 +90,32 @@ fun AppBodd(
 
     AlertDialog(
         onDismissRequest = { onDismiss() },
-        title = { Text(text = "Agregar Película") },
+        title = { Text(text = stringResource(R.string.add_movie)) },
         text = {
             Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 OutlinedTextField(
                     value = title,
                     onValueChange = { title = it },
-                    label = { Text(text = "Título") },
+                    label = {Text(text = stringResource(R.string.titel)) },
                     modifier = Modifier.fillMaxWidth()
                 )
                 OutlinedTextField(
                     value = overview,
                     onValueChange = { overview = it },
-                    label = { Text(text = "Descripción") },
+                    label = { Text(text = stringResource(R.string.descrip)) },
                     modifier = Modifier.fillMaxWidth()
                 )
                 OutlinedTextField(
                     value = releaseDate,
                     onValueChange = { releaseDate = it },
-                    label = { Text(text = "Fecha de Lanzamiento") },
+                    label = { Text(text = stringResource(R.string.fech_lanz)) },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     modifier = Modifier.fillMaxWidth()
                 )
                 OutlinedTextField(
                     value = voteAverage,
                     onValueChange = { voteAverage = it },
-                    label = { Text(text = "Calificación") },
+                    label = { Text(text = stringResource(R.string.note)) },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -134,12 +134,12 @@ fun AppBodd(
                 onAddMovie(newMovie)
                 onDismiss()
             }) {
-                Text(text = "Agregar")
+                Text(text = stringResource(R.string.add))
             }
         },
         dismissButton = {
             TextButton(onClick = { onDismiss() }) {
-                Text(text = "Cancelar")
+                Text(text = stringResource(R.string.cancel))
             }
         }
     )
